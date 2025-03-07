@@ -1,0 +1,41 @@
+body {
+    background-image: url('https://manageat.com/wp-content/uploads/2023/08/%C2%BFCuales-son-los-principales-fondos-de-capital-en-inversion-en-restaurantes_.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1{
+    font-family: "Sofia", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(236, 0, 0);
+  }
+
+  img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #6ee4ec;
+    color: white;
+  }
+  
+  button:hover{
+    background-color: #67dbff;
+  }
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}

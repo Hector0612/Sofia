@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&family=Sofia&display=swap" rel="stylesheet">
+    <title>San Valentín</title>
+</head>
+<body>
+    <div class="container">
+        <img src="https://media.tenor.com/3rSzg8dQoY8AAAAj/goma-heart-goma-love.gif" alt="San Valentín" width="200">
+        <h1>SOFIA, TE PROMETO MI CORAZÓN¿LO ACEPTAS? 🥰</h1>
+        <div class="buttons">
+            <button class="yes" onclick="sendMessage(true)">SÍ</button>
+            <button class="no"  onclick="sendMessage(false)">NO</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage(isYes) {
+            let phone = "51933895244"; // 🔹 Reemplaza con tu número en formato internacional (sin "+")
+            let message = isYes ? "¡SÍ, LO ACEPTO! 💖😍" : "Intentó decir NO, pero no lo acepto 😂💘";
+            let whatsappURL = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+            let redirectURL = isYes ? "si.html" : "no.html";
+
+            // Abre WhatsApp en una nueva pestaña
+            window.open(whatsappURL, "_blank");
+
+            // Redirige en la pestaña actual después de 2 segundos
+            setTimeout(() => {
+                window.location.href = redirectURL;
+            }, 2000);
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+    const noButton = document.querySelector(".no");
+
+    noButton.addEventListener("mouseover", function () {
+        const x = Math.random() * (window.innerWidth - noButton.clientWidth);
+        const y = Math.random() * (window.innerHeight - noButton.clientHeight);
+
+        noButton.style.position = "absolute";
+        noButton.style.left = `${x}px`;
+        noButton.style.top = `${y}px`;
+    });
+});
+    </script>
+
+<audio id="musica" loop>
+    <source src="Piso 21, Micro TDH - Te Vi (Audio) (mp3cut.net).mp3" type="audio/mpeg">
+    
+</audio>
+<br><br><br><br><br><br>
+<button onclick="document.getElementById('musica').play()">🎵 DALE CLICK </button>
+
+
+
+</body>
+</html>
+
